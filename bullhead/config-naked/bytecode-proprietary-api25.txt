@@ -7,5 +7,6 @@ system/framework/cneapiclient.jar
 system/framework/qcrilhook.jar
 system/framework/rcsimssettings.jar
 system/framework/rcsservice.jar
+system/priv-app/CNEService/CNEService.apk
 system/priv-app/atfwd/atfwd.apk
 system/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
