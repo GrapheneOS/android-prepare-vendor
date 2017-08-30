@@ -256,6 +256,10 @@ update_vendor_blobs_mk() {
       dst=$src
     fi
 
+    if [[ $file == vendor/etc/selinux* ]]; then
+      continue
+    fi
+
     # Skip files that have dedicated target module (APKs, JARs & selected shared libraries)
     fileExt="${src##*.}"
     if [[ "$fileExt" == "apk" || "$fileExt" == "jar" ]]; then
