@@ -1,0 +1,13 @@
+system/bin/wcnss_filter
+system/etc/diag/Bullhead_radio-general.cfg
+system/etc/diag/ims_epdg.cfg
+system/etc/diag/wlan.cfg
+system/lib/hw/audio.primary.msm8992.so
+system/lib/hw/local_time.default.so
+system/lib/hw/nfc_nci.bullhead.so
+system/lib/soundfx/libfmas.so
+system/lib64/hw/audio.primary.msm8992.so
+system/lib64/hw/fingerprint.bullhead.so
+system/lib64/hw/local_time.default.so
+system/lib64/hw/nfc_nci.bullhead.so
+system/lib64/lib_fpc_tac_shared.so
