@@ -21,7 +21,6 @@ declare -ra SUPPORTED_DEVICES=(
 readonly NID_URL="https://google.com"
 readonly GURL="https://developers.google.com/android/images"
 readonly GURL2="https://developers.google.com/android/ota"
-readonly TOSURL="https://developers.google.com/profile/acknowledgeNotification"
 
 # oatdump dependencies URLs as compiled from AOSP matching API levels
 readonly L_OATDUMP_URL_API23='https://onedrive.live.com/download?cid=D1FAC8CC6BE2C2B0&resid=D1FAC8CC6BE2C2B0%21490&authkey=ACA4f4Zvs3Tb_SY'

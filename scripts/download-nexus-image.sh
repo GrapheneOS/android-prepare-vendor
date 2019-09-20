@@ -37,16 +37,17 @@ accept_tos() {
   # Message based on 'October 3, 2016' update
   cat << EOF
 
---{ Google Terms and Conditions
+--{ Google Terms and Conditions [1]
 Downloading of the system image and use of the device software is subject to the
-Google Terms of Service [1]. By continuing, you agree to the Google Terms of
-Service [1] and Privacy Policy [2]. Your downloading of the system image and use
+Google Terms of Service [2]. By continuing, you agree to the Google Terms of
+Service [2] and Privacy Policy [3]. Your downloading of the system image and use
 of the device software may also be subject to certain third-party terms of
 service, which can be found in Settings > About phone > Legal information, or as
 otherwise provided.
 
-[1] https://www.google.com/intl/en/policies/terms/
-[2] https://www.google.com/intl/en/policies/privacy/
+[1] https://developers.google.com/android/images#legal
+[2] https://www.google.com/intl/en/policies/terms/
+[3] https://www.google.com/intl/en/policies/privacy/
 
 EOF
 
@@ -153,36 +154,22 @@ done
 
 # Accept news ToS page
 accept_tos
+
 if [ "$OTA" = true ]; then
   URL="$GURL2"
 else
   URL="$GURL"
 fi
-xsrf_token=$(curl -L -b "$COOKIE_FILE" --silent "$URL" | \
-             grep -io "<meta name=\"xsrf_token\" content=\".*\" />" | \
-             cut -d '"' -f4)
-if [ "$OTA" = true ]; then
-  response=$(curl -b "$COOKIE_FILE" -X POST -d "notification_id=wall-nexus-ota-tos" \
-             -H "X_XSRFToken: $xsrf_token" --write-out "%{http_code}" --output /dev/null \
-             --silent "$TOSURL")
-else
-  response=$(curl -b "$COOKIE_FILE" -X POST -d "notification_id=wall-nexus-image-tos" \
-             -H "X_XSRFToken: $xsrf_token" --write-out "%{http_code}" --output /dev/null \
-             --silent "$TOSURL")
-fi
-if [[ "$response" != "200" ]]; then
-  echo "[-] Nexus ToS accept request failed"
-  abort 1
-fi
 
 # Then retrieve the index page
 if [ "$OTA" = true ]; then
-  url=$(curl -L -b "$COOKIE_FILE" --silent -H "X_XSRFToken: $xsrf_token" "$URL" | \
+  url=$(curl -L -b "$COOKIE_FILE" --silent "$URL" | \
         grep -i "<a href=.*$DEV_ALIAS-ota-$BUILDID-" | cut -d '"' -f2)
 else
-  url=$(curl -L -b "$COOKIE_FILE" --silent -H "X_XSRFToken: $xsrf_token" "$URL" | \
+  url=$(curl -L -b "$COOKIE_FILE" --silent  "$URL" | \
         grep -i "<a href=.*$DEV_ALIAS-$BUILDID-" | cut -d '"' -f2)
 fi
+
 if [ "$url" == "" ]; then
   echo "[-] URL not found"
   abort 1
