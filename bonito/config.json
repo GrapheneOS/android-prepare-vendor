@@ -517,7 +517,14 @@
         "system/lib64/vendor.qti.ims.callinfo@1.0.so",
         "system/lib64/vendor.qti.imsrtpservice@1.0.so"
       ],
-      "product-bytecode": [],
+      "product-bytecode": [
+        "product/priv-app/EuiccGoogle/EuiccGoogle.apk::PRESIGNED",
+        "product/priv-app/EuiccSupportPixel/EuiccSupportPixel.apk::PRESIGNED"
+      ],
+      "product-other": [
+        "product/priv-app/EuiccSupportPixel/esim-full-v0.img",
+        "product/priv-app/EuiccSupportPixel/esim-v1.img"
+      ],
       "forced-modules": [],
       "new-modules": [],
       "dep-dso": [],
