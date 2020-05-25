@@ -36,7 +36,9 @@
         "product/framework/com.qualcomm.qti.uceservice-V2.1-java.jar",
         "product/framework/qcrilhook.jar",
         "product/framework/qti-telephony-hidl-wrapper.jar",
-        "product/framework/qti-telephony-utils.jar"
+        "product/framework/qti-telephony-utils.jar",
+        "product/priv-app/EuiccGoogle/EuiccGoogle.apk::PRESIGNED",
+        "product/priv-app/EuiccSupportPixel/EuiccSupportPixel.apk::PRESIGNED"
       ],
       "product-other": [
         "product/etc/permissions/qti_telephony_hidl_wrapper.xml",
@@ -81,7 +83,10 @@
         "product/lib64/libsecureuisvc_jni.so",
         "product/lib64/libsketchology_native.so",
         "product/lib64/vendor.qti.data.factory@1.0.so",
-        "product/lib64/vendor.qti.hardware.data.iwlan@1.0.so"
+        "product/lib64/vendor.qti.hardware.data.iwlan@1.0.so",
+        "product/priv-app/EuiccGoogle/esim-a1.img",
+        "product/priv-app/EuiccGoogle/esim-a2.img",
+        "product/priv-app/EuiccSupportPixel/esim-full-v1.img"
       ],
       "system-bytecode": [
         "system/framework/vendor.qti.hardware.alarm-V1.0-java.jar",
