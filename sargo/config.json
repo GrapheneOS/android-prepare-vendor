@@ -270,6 +270,7 @@
         "libprotobuf-cpp-full",
         "libprotobuf-cpp-full-rtti"
       ],
+      "product-bytecode": [],
       "new-modules": [],
       "dep-dso": [],
       "BoardConfigVendor": [],
