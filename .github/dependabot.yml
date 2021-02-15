@@ -1,0 +1,7 @@
+version: 2
+updates:
+- package-ecosystem: pip
+  directory: "/scripts/extract_android_ota_payload"
+  schedule:
+    interval: daily
+  target-branch: '11'
