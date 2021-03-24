@@ -19,8 +19,7 @@
     "uefisecapp",
     "xbl",
     "xbl_config",
-    "featenabler",
-    "vendor_boot"
+    "featenabler"
   ],
   "AndroidMk": "bramble/Android.mk",
   "BoardConfigVendorMk": "bramble/BoardConfigVendorPartial.mk",

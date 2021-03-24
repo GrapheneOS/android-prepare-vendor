@@ -19,8 +19,7 @@
     "uefisecapp",
     "xbl",
     "xbl_config",
-    "featenabler",
-    "vendor_boot"
+    "featenabler"
   ],
   "AndroidMk": "redfin/Android.mk",
   "BoardConfigVendorMk": "redfin/BoardConfigVendorPartial.mk",
