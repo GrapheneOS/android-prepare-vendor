@@ -729,7 +729,10 @@ case $BYTECODE_REPAIR_METHOD in
     ;;
 esac
 
-FORCE_PREOPT=false
+if [[ "$DEVICE" = "walleye" || "$DEVICE" = "taimen" || "$DEVICE" = "blueline" || "$DEVICE" = "crosshatch" || "$DEVICE" = "sargo" || "$DEVICE" = "bonito" ]]; then
+    echo "[!] '$DEVICE' cannot be preopted. Disabling preopt. TODO: Fix properly"
+    FORCE_PREOPT=false
+fi
 
 # If deodex all not set provide a list of packages to repair
 if [ $DEODEX_ALL = false ]; then
